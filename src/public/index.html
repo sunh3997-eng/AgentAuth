@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgentAuth — One Integration. Every SaaS API.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="logo">🔐 AgentAuth</a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#integrations">Integrations</a>
+        <a href="#pricing">Pricing</a>
+        <a href="/api/health" class="btn btn-sm">API →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="badge">🚀 Now in Public Beta</div>
+      <h1>One integration.<br><span class="gradient-text">Every SaaS API.</span></h1>
+      <p class="hero-sub">
+        The unified identity layer for AI Agents. Authenticate once, securely call 100+ SaaS APIs.
+        Stop re-implementing OAuth for every service.
+      </p>
+      <div class="hero-actions">
+        <a href="/api/health" class="btn btn-primary btn-lg">Get Started Free</a>
+        <a href="#features" class="btn btn-ghost btn-lg">See How It Works</a>
+      </div>
+      <div class="hero-code">
+        <pre><code><span class="c">// Register your agent, get a token, call any API</span>
+const agent = await agentAuth.register({ name: 'my-agent' });
+const token = await agentAuth.getToken(agent.api_key);
+
+<span class="c">// Proxy calls through AgentAuth — scopes enforced automatically</span>
+const repos = await agentAuth.proxy('github', '/repos', { token });
+const msgs  = await agentAuth.proxy('slack', '/conversations.list', { token });</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats">
+    <div class="stats-inner">
+      <div class="stat">
+        <div class="stat-num">100+</div>
+        <div class="stat-label">SaaS Integrations</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">&lt;50ms</div>
+        <div class="stat-label">Avg Proxy Latency</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">99.9%</div>
+        <div class="stat-label">Uptime SLA</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">SOC 2</div>
+        <div class="stat-label">Compliant</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="features">
+    <div class="section-inner">
+      <h2>Everything your agents need</h2>
+      <p class="section-sub">Three pillars that make agent-to-SaaS integration effortless.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🔑</div>
+          <h3>Unified OAuth Proxy</h3>
+          <p>Connect once to GitHub, Slack, Google, Notion, Linear, and dozens more. AgentAuth handles the OAuth dance, token refresh, and credential storage.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3>Granular Scope Control</h3>
+          <p>Define exactly what each agent can access — down to <code>github:issues:read</code> or <code>slack:messages:write</code>. Least-privilege by default.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Audit & Analytics</h3>
+          <p>Every API call logged with agent ID, provider, endpoint, status, and latency. Real-time dashboard shows usage patterns and anomalies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Integrations -->
+  <section id="integrations" class="integrations">
+    <div class="section-inner">
+      <h2>Works with your stack</h2>
+      <div class="integration-logos">
+        <div class="int-logo" style="--accent:#24292e">🐙 GitHub</div>
+        <div class="int-logo" style="--accent:#4a154b">💬 Slack</div>
+        <div class="int-logo" style="--accent:#4285f4">🔵 Google</div>
+        <div class="int-logo" style="--accent:#000">📝 Notion</div>
+        <div class="int-logo" style="--accent:#5e6ad2">🔺 Linear</div>
+        <div class="int-logo" style="--accent:#0078d4">📧 Outlook</div>
+        <div class="int-logo" style="--accent:#ff6c37">📮 Postman</div>
+        <div class="int-logo" style="--accent:#00b4d8">🗄️ Airtable</div>
+      </div>
+      <p class="section-sub">…and 90+ more via our unified API proxy.</p>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="pricing">
+    <div class="section-inner">
+      <h2>Simple, transparent pricing</h2>
+      <p class="section-sub">Start free. Scale as your agents grow.</p>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-tier">Starter</div>
+          <div class="price-amount">$29<span>/mo</span></div>
+          <ul class="price-features">
+            <li>✓ Up to 5 agents</li>
+            <li>✓ 10,000 API calls/mo</li>
+            <li>✓ 10 SaaS integrations</li>
+            <li>✓ 7-day audit log</li>
+            <li>✓ Community support</li>
+          </ul>
+          <a href="#" class="btn btn-outline">Get Started</a>
+        </div>
+        <div class="price-card featured">
+          <div class="price-badge">Most Popular</div>
+          <div class="price-tier">Pro</div>
+          <div class="price-amount">$99<span>/mo</span></div>
+          <ul class="price-features">
+            <li>✓ Up to 25 agents</li>
+            <li>✓ 100,000 API calls/mo</li>
+            <li>✓ 50 SaaS integrations</li>
+            <li>✓ 30-day audit log</li>
+            <li>✓ Priority support</li>
+            <li>✓ Custom scopes</li>
+          </ul>
+          <a href="#" class="btn btn-primary">Get Started</a>
+        </div>
+        <div class="price-card">
+          <div class="price-tier">Enterprise</div>
+          <div class="price-amount">$299<span>/mo</span></div>
+          <ul class="price-features">
+            <li>✓ Unlimited agents</li>
+            <li>✓ Unlimited API calls</li>
+            <li>✓ 100+ integrations</li>
+            <li>✓ 1-year audit log</li>
+            <li>✓ Dedicated support</li>
+            <li>✓ SSO & SAML</li>
+            <li>✓ On-premise option</li>
+          </ul>
+          <a href="#" class="btn btn-outline">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo">🔐 AgentAuth</span>
+        <p>The identity layer for the agentic era.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Product</h4>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="/api/health">API Status</a>
+        </div>
+        <div>
+          <h4>Developers</h4>
+          <a href="/api/health">Documentation</a>
+          <a href="#">SDKs</a>
+          <a href="#">Changelog</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="#">About</a>
+          <a href="#">Blog</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 AgentAuth. Built for the agentic future.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
